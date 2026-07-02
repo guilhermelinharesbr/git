@@ -32,7 +32,7 @@ Abaixo temos comandos Git em uma ordem que facilita a consulta ou aprendizado.
 
 Mostra as opções do comando git.
 
-Ex: 
+Ex:  
 **git push --help
 git help push** 
 
@@ -49,10 +49,10 @@ Mostra a versão do Git.
 Inicializa repositório. 
 Quando se faz isso ele cria um diretório oculto de nome .git.
 
-Ex: 
+Ex:  
 **git init** -> torna o diretório atual um respositório local do git e cria um diretório oculto de nome .git dentro dele.
 
-Ex2: 
+Ex2:  
 **git init** _nome-repositorio_ -> cria no diretório atual um diretório chamado nome-repositorio e dentro dele cria um diretório oculto de nome .git.
 
 ---
