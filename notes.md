@@ -9,6 +9,7 @@
 - [git --help](#git---help)
 - [git --version](#git---version)
 - [git init](#git-init)
+- [git status](#git-status)
 
 
 
@@ -54,5 +55,11 @@ Ex:
 
 Ex2:  
 **git init** _nome-repositorio_ -> cria no diretório atual um diretório chamado nome-repositorio e dentro dele cria um diretório oculto de nome .git.
+
+---
+
+#### git status
+
+Verifica se alguma mudança foi feita no branch atual.
 
 ---
