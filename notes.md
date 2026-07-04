@@ -73,7 +73,7 @@ Ex:
 **git add .** -> Adiciona todos os arquivos.
 
 Ex2:  
-**git add** _nome_arquivo_
+**git add** _nome_arquivo_  
 **git add imagem.png** -> Se quiser adicionar apenas um arquivo.
 
 Ex3:  
