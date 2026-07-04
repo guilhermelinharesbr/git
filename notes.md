@@ -10,6 +10,7 @@
 - [git --version](#git---version)
 - [git init](#git-init)
 - [git status](#git-status)
+- [git add](#git-add)
 
 
 
@@ -61,5 +62,20 @@ Ex2:
 #### git status
 
 Verifica se alguma mudança foi feita no branch atual.
+
+---
+
+#### git add
+
+Adiciona arquivos ao versionamento, no caso para a área de stage.
+
+Ex:  
+**git add .** -> Adiciona todos os arquivos.
+Ex2:  
+**git add imagem.png** -> Se quiser adicionar apenas um arquivo.
+Ex3:  
+**git add -A** -> Adiciona todos os arquivos de maneira mais completa, pegando tudo (novos + modificados + deletados).
+Ex4:  
+**git add .\*css** -> Adiciona para o stage todos os arquivos .css.
 
 ---
