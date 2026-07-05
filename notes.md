@@ -11,6 +11,7 @@
 - [git init](#git-init)
 - [git status](#git-status)
 - [git add](#git-add)
+- [git commit](#git-commit)
 
 
 
@@ -81,5 +82,21 @@ Ex3:
 
 Ex4:  
 **git add .\*css** -> Adiciona para o stage todos os arquivos .css.
+
+---
+
+#### git commit
+
+Salva as alterações de código.
+
+Ex:  
+**git commit -a -m "Criacao do arquivo HTML"** -> faz o commit, a opção **-a** serve para adicionar automaticamente para arquivos já rastreados pelo Git. A opção -a evita ter que rodar um _git add nomearquivo.txt_ e depois _git commit -m "Criacao do arquivo .txt"_
+Inclui automaticamente arquivos modificados. Inclui arquivos deletados. NÃO inclui arquivos novos (não rastreados). Já a opção -m permite colocar a mensagem do commit direto na linha de comando.
+
+Ex2:  
+**git commit -m "Mudanca no Readme\.md"** 
+
+Ex3:  
+**git commit --amend -m "Adicionando novo arquivo"** -> Altera o último commit feito. O **--amend** vem do inglês corrigir/emendar/alterar. Neste caso ele pega o último commit e cria um novo commit no lugar dele, usa a nova mensagem "Adicionando novo arquivo", inclui tudo que está atualmente no stage (git add) e apaga o commit anterior (na prática, ele deixa de existir no histórico).
 
 ---
