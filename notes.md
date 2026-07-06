@@ -12,6 +12,7 @@
 - [git status](#git-status)
 - [git add](#git-add)
 - [git commit](#git-commit)
+- [git push](#git-push)
 
 
 
@@ -98,5 +99,29 @@ Ex2:
 
 Ex3:  
 **git commit --amend -m "Adicionando novo arquivo"** -> Altera o último commit feito. O **--amend** vem do inglês corrigir/emendar/alterar. Neste caso ele pega o último commit e cria um novo commit no lugar dele, usa a nova mensagem "Adicionando novo arquivo", inclui tudo que está atualmente no stage (git add) e apaga o commit anterior (na prática, ele deixa de existir no histórico).
+
+---
+
+#### git push
+
+Envia atualizações para o repositório remoto.
+
+Ex:  
+**git push -u origin main** -> faz o envio da sua branch main para o repositório remoto (origin) e ainda define ela como padrão. A opção **-u** significa **--set-upstream** (define rastreamento padrão), ao usar a opção _-u_ neste momento evita-se ter que ficar digitando _git push origin main_ apenas, _git push_ e _git pull_, pois o Git já sabe que: main → origin/main.
+
+Ex2:  
+**git push origin main**
+
+Ex3:  
+**git push origin novo-botao**
+
+Ex4:  
+**git push origin main --force** -> Faz um push forçado da branch main para o repositório remoto. Normalmente, o Git só permite push se não houver conflito de histórico, mas com **--force**, será ignorado o histórico remoto e substituído pelo histórico local. É utilizado quando se quer sincornizar os commits do ambiente local com o remoto.
+
+Ex5:  
+**git push origin v2026.04** -> Manda apenas a tag de nome v2026.04 para o GitHub.
+
+Ex6:  
+**git push origin --delete v2026.04** -> Deleta a tag de nome v2026.04 do GitHub.
 
 ---
