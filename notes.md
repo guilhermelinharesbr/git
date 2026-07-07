@@ -13,6 +13,7 @@
 - [git add](#git-add)
 - [git commit](#git-commit)
 - [git push](#git-push)
+- [git pull](#git-pull)
 
 
 
@@ -123,5 +124,23 @@ Ex5:
 
 Ex6:  
 **git push origin --delete v2026.04** -> Deleta a tag de nome v2026.04 do GitHub.
+
+---
+
+#### git pull
+
+Busca e integre-se a outro repositório ou em uma branch local. Incorpora alterações de um repositório remoto na branch atual.
+
+ Ex:  
+```bash
+$ git pull
+Updating 957f6ac..0df5f5b
+Fast-forward
+```
+O _Fast-forward_ é a forma mais limpa e direta que o Git tem de atualizar o seu código. Ele acontece quando a branch que você está puxando (a remota) tem commits novos, mas a sua branch local não tem nenhum commit novo feito por você.
+Basicamente, o Git percebe que não há nenhum conflito para resolver e nenhuma história para juntar. A única coisa que ele precisa fazer é "mover o ponteiro" da sua branch local para frente, apontando para o commit mais recente.
+Para entender melhor o que aconteceu na sua tela:
+_Updating 957f6ac..0df5f5b_: O Git está dizendo que a sua branch local estava no commit 957f6ac e agora foi atualizada para o commit 0df5f5b.
+_Fast-forward_: Significa que essa atualização foi feita sem a necessidade de criar um novo "commit de merge". O histórico continuou uma linha reta perfeita.
 
 ---
