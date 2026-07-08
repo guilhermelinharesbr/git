@@ -14,6 +14,7 @@
 - [git commit](#git-commit)
 - [git push](#git-push)
 - [git pull](#git-pull)
+- [git restore](#git-restore)
 
 
 
@@ -142,5 +143,14 @@ Basicamente, o Git percebe que não há nenhum conflito para resolver e nenhuma 
 Para entender melhor o que aconteceu na sua tela:
 _Updating 957f6ac..0df5f5b_: O Git está dizendo que a sua branch local estava no commit 957f6ac e agora foi atualizada para o commit 0df5f5b.
 _Fast-forward_: Significa que essa atualização foi feita sem a necessidade de criar um novo "commit de merge". O histórico continuou uma linha reta perfeita.
+
+---
+
+#### git restore
+
+Restaurar arquivos da árvore de trabalho.
+
+Ex:  
+**git restore index.html** -> Descarta as alterações feitas no arquivo index.html, voltando ele para o estado do último commit.
 
 ---
