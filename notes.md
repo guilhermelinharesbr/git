@@ -15,6 +15,7 @@
 - [git push](#git-push)
 - [git pull](#git-pull)
 - [git restore](#git-restore)
+- [git branch](#git-branch)
 
 
 
@@ -152,5 +153,25 @@ Restaurar arquivos da árvore de trabalho.
 
 Ex:  
 **git restore index.html** -> Descarta as alterações feitas no arquivo index.html, voltando ele para o estado do último commit.
+
+---
+
+#### git branch
+
+Lista todas as ramificações existentes, além de mostrar em qual branch você está.
+
+Ex:  
+**git branch** -> Lista as branches existente e a que você está usando.
+
+Ex2:  
+**git branch -M main** -> A opção **-M** força a renomeação, mesmo que já exista uma branch com esse nome. Se usar **-m** renomearia apenas se não existir uma branch de nome main.  
+**-m**  = rename (safe)  
+**-M**  = rename (force)
+
+Ex3:  
+**git branch novas-cores** -> Cria uma branch de nome novas-cores.
+
+Ex4:  
+**git branch -d novas-cores** -> Deleta a branch de nome novas-cores.
 
 ---
