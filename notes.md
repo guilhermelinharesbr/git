@@ -16,6 +16,7 @@
 - [git pull](#git-pull)
 - [git restore](#git-restore)
 - [git branch](#git-branch)
+- [git clone](#git-clone)
 
 
 
@@ -173,5 +174,20 @@ Ex3:
 
 Ex4:  
 **git branch -d novas-cores** -> Deleta a branch de nome novas-cores.
+
+---
+
+#### git clone
+
+Clona um repositório.
+
+Ex:  
+**git clone** https://github.com/guilhermelinharesbr/markdown.git
+
+Ex2:  
+**git clone** https://github.com/guilhermelinharesbr/tutorial_git.git testeclone -> Clona o projeto e joga em um pasta chamada testeclone.
+
+Ex3:  
+**git clone** git@github.com:guilhermelinharesbr/markdown.git -> Clona o repositório usando SSH ao invés de HTTPS.
 
 ---
