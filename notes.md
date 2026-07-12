@@ -18,6 +18,7 @@
 - [git branch](#git-branch)
 - [git clone](#git-clone)
 - [git fetch](#git-fetch)
+- [git reset](#git-reset)
 
 
 
@@ -206,5 +207,23 @@ Ex:
 
 Ex2:  
 **git fetch origin pull/ID/head:BRANCH** -> Cria uma branch com os commits do pull request.
+
+---
+
+#### git reset
+
+Usado para voltar o estado do Git para um ponto anterior, podendo afetar: a staging area; o histórico de commits e até os arquivos do projeto. 
+Volta o código a algum ponto específico.
+
+Obs: Não usar este comando se já tiver feito um git push, neste caso é melhor usar o git revert.
+
+Ex:  
+**git reset index.html** -> Remove o arquivo index.html da área de stage (staging area), ou seja, ele desfaz o git add daquele arquivo, mas sem apagar suas alterações.
+
+Ex2:  
+**git reset HEAD~1** -> Volta para alterações feitas no último commit.
+
+Ex3:  
+**git reset HEAD~1 --hard** ou **git reset --hard HEAD~1**   -> Volta para alterações feitas no último commit. Se fose HEAD~2 voltaria dois commits. A flag --hard apaga tudo sem dó, enquanto o comando sem essa flag é mais seguro e preserva o seu trabalho, usar esa flag com cuidado, apesar de ser mais perigosa essa flag é muito usada no mercado de trabalho.
 
 ---
