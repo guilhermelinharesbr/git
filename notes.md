@@ -17,6 +17,7 @@
 - [git restore](#git-restore)
 - [git branch](#git-branch)
 - [git clone](#git-clone)
+- [git remote]()
 
 
 
@@ -189,5 +190,30 @@ Ex2:
 
 Ex3:  
 **git clone** git@github.com:guilhermelinharesbr/markdown.git -> Clona o repositório usando SSH ao invés de HTTPS.
+
+---
+
+#### git remote
+
+Gerencia repositórios remotos.
+
+Ex:  
+**git remote add origin https://github.com/guilhermelinharesbr/tutorial_git.git** -> O **add** adiciona um novo repositório remoto, o **origin** é o nome do remoto (padrão mais usado), e é o repositório remoto no GitHub que seu projeto vai apontar. 
+
+Obs: Quando se tem um _origin_ e um _upstream_, o origin é o fork e o upstream é o original.
+
+Obs2: Esse comando precisa ser usado apenas uma vez para criar a conexão do repositório local com o repositório remoto.
+
+Ex2:  
+**git remote -v** -> Mostra os repositórios remotos configurados no seu projeto.
+
+Ex3:  
+**git remote remove origin** -> Remove o repositório remoto chamado origin da configuração do seu projeto Git, para conferir a remoção só usar o _git remote -v_.
+
+Ex4:  
+**git remote show origin** -> Mostra informações detalhadas sobre o repositório remoto chamado origin, tem uma saída mais completa do que o comando _git remote -v_.
+
+Ex5:  
+**git remote set-url origin https://github.com/guilhermelinharesbr/novo_tutorial_git.git** -> Altera a URL do repositório remoto chamado origin, para conferir a remoção só usar o _git remote -v_.
 
 ---
