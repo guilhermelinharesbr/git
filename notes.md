@@ -17,8 +17,9 @@
 - [git restore](#git-restore)
 - [git branch](#git-branch)
 - [git clone](#git-clone)
-- [git remote]()
-
+- [git fetch](#git-fetch)
+- [git remote](#git-remote)
+- [git reset](#git-reset)
 
 
 ---
@@ -193,6 +194,22 @@ Ex3:
 
 ---
 
+#### git fetch
+
+Baixa objetos e referências de outro repositório.
+Obtenha branches e/ou tags (coletivamente, "refs") de um ou mais repositórios, juntamente com os objetos necessários para completar seus históricos.
+Usado basicamente para alinhar os históricos do repositório local com o remoto, para assim, decidir se precisa fazer um _git pull_ antes de fazer um _git push_.
+
+Obs: O _git fetch_ pode ser usado para fazer o rebase de uma branch em vez de fazer o merge. Fetch e Rebase é melhor para manter o histórico do desenvolvimento.
+
+Ex:  
+**git fetch**
+
+Ex2:  
+**git fetch origin pull/ID/head:BRANCH** -> Cria uma branch com os commits do pull request.
+
+---
+
 #### git remote
 
 Gerencia repositórios remotos.
@@ -215,5 +232,23 @@ Ex4:
 
 Ex5:  
 **git remote set-url origin https://github.com/guilhermelinharesbr/novo_tutorial_git.git** -> Altera a URL do repositório remoto chamado origin, para conferir a remoção só usar o _git remote -v_.
+
+---
+
+#### git reset
+
+Usado para voltar o estado do Git para um ponto anterior, podendo afetar: a staging area; o histórico de commits e até os arquivos do projeto. 
+Volta o código a algum ponto específico.
+
+Obs: Não usar este comando se já tiver feito um git push, neste caso é melhor usar o git revert.
+
+Ex:  
+**git reset index.html** -> Remove o arquivo index.html da área de stage (staging area), ou seja, ele desfaz o git add daquele arquivo, mas sem apagar suas alterações.
+
+Ex2:  
+**git reset HEAD~1** -> Volta para alterações feitas no último commit.
+
+Ex3:  
+**git reset HEAD~1 --hard** ou **git reset --hard HEAD~1**   -> Volta para alterações feitas no último commit. Se fose HEAD~2 voltaria dois commits. A flag --hard apaga tudo sem dó, enquanto o comando sem essa flag é mais seguro e preserva o seu trabalho, usar esa flag com cuidado, apesar de ser mais perigosa essa flag é muito usada no mercado de trabalho.
 
 ---
