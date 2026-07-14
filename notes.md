@@ -8,6 +8,7 @@
 - [Comandos](#comandos)
 - [git --help](#git---help)
 - [git --version](#git---version)
+- [git config](#git-config)
 - [git init](#git-init)
 - [git status](#git-status)
 - [git add](#git-add)
@@ -20,6 +21,7 @@
 - [git fetch](#git-fetch)
 - [git remote](#git-remote)
 - [git reset](#git-reset)
+
 
 
 ---
@@ -51,6 +53,35 @@ git help push**
 #### git --version
 
 Mostra a versão do Git.
+
+---
+
+#### git config
+
+Obtém e define opções globais ou do repositório.
+
+Ex:  
+**git config --list** -> Mostra todas as configurações do Git ativas no seu ambiente, seja elas locais ou de sistema, como name, email, editor, branch padrão, credenciais, etc.
+As informações mais básicas que precisam aparecer são o name e email. 
+
+Ex2:  
+**git config --global --list** -> Mostra todas as configurações globais.
+
+Ex3:  
+**git config --global --add user.name "Guilherme Linhares"** -> Adicionando um name.
+**git config --global --add user.email "guilherme@gmail.com"** -> Adicionando um email.
+
+Ex4:  
+**git config user.name "Guilherme Linhares"** -> Adicionando um name apenas para o repositório local.
+
+Ex5:  
+**git config --global core.editor gedit** -> Define o gedit como o editor padrão.
+**git config --global core.editor "code --wait"** -> Define o VS Code como editor padrão. Ele usa esse --wait o Git com o VSCode não se comunicariam corretamente.
+**git config --global core.editor** -> Verifica qual o editor padrão.
+
+Ex6:  
+**git config --global --unset-all user.name** -> Remove todos os user.name das configurações globais.
+**git config --global --unset-all user.email** -> Remove todos os user.email das configurações globais. 
 
 ---
 
