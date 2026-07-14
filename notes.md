@@ -69,6 +69,7 @@ Ex2:
 
 Ex3:  
 **git config --global --add user.name "Guilherme Linhares"** -> Adicionando um name.
+
 **git config --global --add user.email "guilherme@gmail.com"** -> Adicionando um email.
 
 Ex4:  
@@ -76,11 +77,14 @@ Ex4:
 
 Ex5:  
 **git config --global core.editor gedit** -> Define o gedit como o editor padrão.
+
 **git config --global core.editor "code --wait"** -> Define o VS Code como editor padrão. Ele usa esse --wait o Git com o VSCode não se comunicariam corretamente.
+
 **git config --global core.editor** -> Verifica qual o editor padrão.
 
 Ex6:  
 **git config --global --unset-all user.name** -> Remove todos os user.name das configurações globais.
+
 **git config --global --unset-all user.email** -> Remove todos os user.email das configurações globais. 
 
 ---
