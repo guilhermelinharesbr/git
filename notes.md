@@ -19,6 +19,7 @@
 - [git branch](#git-branch)
 - [git clone](#git-clone)
 - [git fetch](#git-fetch)
+- [git log](#git-log)
 - [git remote](#git-remote)
 - [git reset](#git-reset)
 
@@ -242,6 +243,36 @@ Ex:
 
 Ex2:  
 **git fetch origin pull/ID/head:BRANCH** -> Cria uma branch com os commits do pull request.
+
+---
+
+#### git log
+
+Exibe os registros de logs dos commits.
+
+Ex:  
+**git log** -> Exibe de maneira detlahada os registros de log dos commits. Mostra do mais recente para o mais antigo.
+Onde tiver por exemplo "c58b22ee93f4c5b5fe4a4aab70998b1cece0ade6" é o ID do commit.
+
+Ex2:  
+**git log -3** -> Exibe apenas os últimos 3 commits.
+
+Ex3:  
+**git log --oneline** -> Exibe cada commit em uma única linha, mostrando um hash curto do commit e a mensagem do commit.
+
+Ex4:  **git log --oneline -5** -> Exibe apenas os 5 últimos commits de maneira resumida.
+
+Ex5:  
+**git log --author="Guilherme Linhares"** -> Mostra os logs do autor Guilherme Linhares.
+
+Ex6:  
+**git log --before="2026-04-15"** -> Filtra o histórico e mostra apenas commits com data anteriores a 15/04/2026.
+
+Ex7:  
+**git log -- pasta1/** -> Mostra os commits que envolveram a pasta de nome pasta1.
+
+Ex8:  
+**git log main** -> Mostra os logs da branch main.
 
 ---
 
