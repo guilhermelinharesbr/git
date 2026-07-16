@@ -22,6 +22,7 @@
 - [git log](#git-log)
 - [git remote](#git-remote)
 - [git reset](#git-reset)
+- [git shortlog](#git-shortlog)
 
 
 
@@ -316,5 +317,15 @@ Ex2:
 
 Ex3:  
 **git reset HEAD~1 --hard** ou **git reset --hard HEAD~1**   -> Volta para alterações feitas no último commit. Se fose HEAD~2 voltaria dois commits. A flag --hard apaga tudo sem dó, enquanto o comando sem essa flag é mais seguro e preserva o seu trabalho, usar esa flag com cuidado, apesar de ser mais perigosa essa flag é muito usada no mercado de trabalho.
+
+---
+
+#### git shortlog
+
+Ex:  
+**git shortlog** -> Mostra um resumo dos commits agrupados por autor. Muito usado para ver quem contribuiu e quantos commits cada um fez.
+
+Ex2:  
+**git shorlog -sn** -> Mostra um resumo dos commits por autor, ordenado pela quantidade.
 
 ---
