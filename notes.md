@@ -20,6 +20,7 @@
 - [git clone](#git-clone)
 - [git fetch](#git-fetch)
 - [git log](#git-log)
+- [git reflog](#git-reflog)
 - [git remote](#git-remote)
 - [git reset](#git-reset)
 - [git shortlog](#git-shortlog)
@@ -274,6 +275,14 @@ Ex7:
 
 Ex8:  
 **git log main** -> Mostra os logs da branch main.
+
+---
+
+#### git reflog
+
+Mostra tudo que aconteceu com o ponteiro do _HEAD_, mesmo coisas que não aparecem no _git log_. Histórico de ações do Git inclui coisas “perdidas”. 
+
+O _reflog_ é local, não vai pro GitHub. Ele expira com o tempo, geralmente 30 a 90 dias. Registro completo de tudo que você fez no repositório, inclusive erros.
 
 ---
 
