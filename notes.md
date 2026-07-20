@@ -24,6 +24,7 @@
 - [git remote](#git-remote)
 - [git reset](#git-reset)
 - [git shortlog](#git-shortlog)
+- [git switch]()
 
 
 
@@ -336,5 +337,16 @@ Ex:
 
 Ex2:  
 **git shorlog -sn** -> Mostra um resumo dos commits por autor, ordenado pela quantidade.
+
+---
+
+#### git switch
+
+A partir do Git 2.23, o comando _git switch_ foi introduzido como alternativa mais intuitiva para mudar de branch, ou seja ele veio para substituir o comando _git checkout_.
+
+Ex:  
+**git switch main** -> Vai para a branch main.
+
+**git switch minha-contribuicao** -> Vai para a branch minha-contribuicao.
 
 ---
