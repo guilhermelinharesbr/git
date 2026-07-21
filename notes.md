@@ -17,6 +17,7 @@
 - [git pull](#git-pull)
 - [git restore](#git-restore)
 - [git branch](#git-branch)
+- [git checkout](#git-checkout)
 - [git clone](#git-clone)
 - [git fetch](#git-fetch)
 - [git log](#git-log)
@@ -24,7 +25,7 @@
 - [git remote](#git-remote)
 - [git reset](#git-reset)
 - [git shortlog](#git-shortlog)
-- [git switch]()
+- [git switch](#git-switch)
 
 
 
@@ -215,6 +216,43 @@ Ex3:
 
 Ex4:  
 **git branch -d novas-cores** -> Deleta a branch de nome novas-cores.
+
+---
+
+#### git checkout
+
+Alternar entre ramificações e restaurar arquivos de diferentes commits.
+
+Ex:  
+**git checkout main** -> Vai para a branch main.
+
+**git checkout minha-contribuicao** -> Vai para a branch minha-contribuicao.
+
+**git checkout -b "novo-botao"** -> Cria a branch de nome novo-botao e entra nela.  
+Obs: O comando _git switch_ foi introduzido como alternativa mais intuitiva para mudar de branch, ou seja ele veio para substituir o comando git checkout.
+
+Ex2:  
+**git checkout index.html** -> Volta o arquivo index.html para o estado do último commit.
+
+Ex3:  
+**git checkout** _commit_  
+_git checkout 536d1aa6e86b2a1baefd3267e12071cb442691d4_ -> Para navegar pelo histórico de commits do arquivo de nome personagens.txt, onde fica no modo detached HEAD, que é um estado que o repositório fica quando se está navegado pelo histórico, no caso significa que você saiu do HEAD que é a linha do último commit. 
+Não precisa fornecer o código completo do commit, podendo ser apenas os primeiros 6 caracteres, mas neste exemplo prefeir usar o código do commit completo. 
+Para voltar para a branch main, com os commits atuais basta rodar git checkout main.
+
+Ex4:  
+**git checkout -- <path_or_file>** -> Desfaz todas as alterações que não estejam no Stage desde o último commit.  
+**git checkout -- personagens**
+**git checkout --** -> Da mesma forma que para adicionar todos os arquivos modificados para a Stage usa-se o _git add ._ o _git checkout --_ . desfaz as mudanças em todos os arquivos que foram modificados e não estão na Stage.
+
+Ex5:  
+**git checkout HEAD -- <path_or_file>** -> Desfaz as alterações desde o último commit incluindo o Stage  
+
+**git checkout HEAD -- personagens** -> Desfaz as alterações do arquivo personages, mesmo que ele já esteja na Stage.
+
+Ex6:  
+**git checkout** _tag_ -> Entra em uma tag.  
+**git checkout v2026.04** -> Entra na tag de nome v2026.04, é aconselhável ao entrar em uma tag que se crie uma nova branch para trabalhar nela.
 
 ---
 
