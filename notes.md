@@ -21,6 +21,7 @@
 - [git clone](#git-clone)
 - [git fetch](#git-fetch)
 - [git log](#git-log)
+- [git merge]()
 - [git reflog](#git-reflog)
 - [git remote](#git-remote)
 - [git reset](#git-reset)
@@ -314,6 +315,20 @@ Ex7:
 
 Ex8:  
 **git log main** -> Mostra os logs da branch main.
+
+---
+
+#### git merge
+
+É usado para combinar várias sequências de commits em um único histórico unificado. Normalmente, ele é usado para integrar as alterações de um branch de funcionalidade em um branch principal após a conclusão do desenvolvimento.
+
+Ex:  
+**git merge novo-botao** -> Supondo que estou no Git Bash e estou na branch main dele, para fazer o merge da branch novo-botao com a main, basta rodar esse comando.
+
+Obs: Quando usar _git merge_ ao invés de _git rebase_:
+1. Branches de produção/públicas: Quando você vai juntar a feature concluída na main.
+2. Trabalho em equipe na mesma branch: Se você e outro desenvolvedor estão buildando a mesma funcionalidade juntos na mesma branch branch remota.
+3. Auditoria rigorosa: Se a sua empresa exige saber o momento exato em que uma funcionalidade foi integrada para fins de conformidade.
 
 ---
 
