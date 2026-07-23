@@ -21,7 +21,8 @@
 - [git clone](#git-clone)
 - [git fetch](#git-fetch)
 - [git log](#git-log)
-- [git merge]()
+- [git merge](#git-merge)
+- [git rebase](#git-rebase)
 - [git reflog](#git-reflog)
 - [git remote](#git-remote)
 - [git reset](#git-reset)
@@ -329,6 +330,24 @@ Obs: Quando usar _git merge_ ao invés de _git rebase_:
 1. Branches de produção/públicas: Quando você vai juntar a feature concluída na main.
 2. Trabalho em equipe na mesma branch: Se você e outro desenvolvedor estão buildando a mesma funcionalidade juntos na mesma branch branch remota.
 3. Auditoria rigorosa: Se a sua empresa exige saber o momento exato em que uma funcionalidade foi integrada para fins de conformidade.
+
+---
+
+#### git rebase
+
+Reaplica commits de uma branch em cima de outra, reescrevendo o histórico para deixá-lo mais linear e organizado. Enquanto o merge junta históricos, o rebase reescreve o histórico de maneira linear. 
+Indica por exemplo, quando se adiciona novos arquivos ou modificações mínimas em arquivos.
+
+Ex:  
+**git checkout novo-botao** depois **git rebase main** -> Entra na branch novo-botao, depois atualiza a branch novo-botao com base na branch main, reescrevendo o histórico.
+
+Quando usar _git rebase_ ao invés de _git merge_:
+
+1. Atualizar sua branch local: Você está criando uma funcionalidade que está demorando três dias. A main recebeu atualizações de outros colegas. Você faz um git rebase main na sua branch para trazer as novidades deles para trás dos seus commits, resolvendo conflitos localmente e aos poucos.
+2. Limpar o histórico antes do Pull Request: Usar o rebase interativo (git rebase -i) para juntar (squash) vários commits pequenos e confusos (como "corrigindo tipo", "tentativa 2", "agora vai") em um único commit limpo e explicativo antes de mandar para revisão. A Regra de Ouro do Rebase: Nunca, sob hipótese alguma, use git rebase em uma branch pública (como a main ou uma branch de feature compartilhada). Se o commit já foi enviado para o servidor e outras pessoas puxaram para suas máquinas, reescrever esse histórico vai causar caos no próximo git pull da equipe.
+
+ Ex2:  
+ **git checkout branch2** depois **git rebase main** -> Entra na branch de nome branch2, depois atualiza a branch de nome branch2 com base na branch main, reescrevendo o histórico. Havia conflito nos commits. Após resolver o conflito foi rodado o git status, para ver como estava sendo exibida a resolução do conflito, foi percebido que ainda está dentro de um rebase, que foi parado apenas para resolução do conflito. As opções que apareceram foram: _git rebase --continue_, _git rebase --skip_ e _git rebase --abort_. Foi optado por tentar continuar o rebase. Foi rodado o git add ., depois git status, depois git rebase --continue.
 
 ---
 
