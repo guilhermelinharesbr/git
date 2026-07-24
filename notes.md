@@ -18,6 +18,7 @@
 - [git restore](#git-restore)
 - [git branch](#git-branch)
 - [git checkout](#git-checkout)
+- [git clean](#git-clean)
 - [git clone](#git-clone)
 - [git fetch](#git-fetch)
 - [git log](#git-log)
@@ -255,6 +256,15 @@ Ex5:
 Ex6:  
 **git checkout** _tag_ -> Entra em uma tag.  
 **git checkout v2026.04** -> Entra na tag de nome v2026.04, é aconselhável ao entrar em uma tag que se crie uma nova branch para trabalhar nela.
+
+---
+
+#### git clean
+
+Remove arquivos untracked da working tree.
+
+Ex:  
+**git clean -f** ou **git clean --force** -> A opção **-f** ou **--force** é usada se a variável de configuração do Git _clean.requireForce_ não estiver definida como false, o comando git clean se recusará a excluir arquivos ou diretórios, a menos que seja fornecido o parâmetro -f. O Git também se recusará a modificar repositórios Git aninhados não rastreados (diretórios com um subdiretório .git), a menos que um segundo parâmetro -f seja fornecido.
 
 ---
 
